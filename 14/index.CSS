@@ -13,7 +13,7 @@ h1 {
   /*overline上划线  line-through添加删除线 none删除修饰线*/
   border-bottom:1px solid black;/*标题h1中间的分割线;*/
   font-style: oblique;
-  /*font-style可以理解为字体风格 normal是通常 italic是斜体 oblique以倾斜的形式呈现若不行，则使用浏览器默认的倾斜来显示
+  /*font-style可以理解为字体风格 normal是通常 italic是斜体 oblique以倾斜的形式呈现若不行，则使用浏览器默认的倾斜来显示*/
 }
 /*a{
   color:red;
@@ -36,14 +36,3 @@ html {
     font-size: 1.2rem;
 
 }
-/*body的rgb变色形式
-/* body{
-	background-color: rgb(25%, 41%, 88%);
-	background-color: rgb(65, 105, 225);
-}*/
-/*body的十六进制码的颜色
-/*
-body{
-	background-color: #4169E1;
-}
-*/
