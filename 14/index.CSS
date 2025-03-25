@@ -1,0 +1,49 @@
+p {
+	/* 字体颜色: 茶红色 */
+	/*color: maroon;*/
+  font-size: 1rem;
+}
+h1, h2 {/*指定字体*/
+	/*color: grey;*/
+  font-size: 1.1rem;
+
+}
+h1 {
+  text-decoration: overline;/*z这个下划线长度取决于属性的长度其他属性还有*/
+  /*overline上划线  line-through添加删除线 none删除修饰线*/
+  border-bottom:1px solid black;/*标题h1中间的分割线;*/
+  font-style: oblique;
+  /*font-style可以理解为字体风格 normal是通常 italic是斜体 oblique以倾斜的形式呈现若不行，则使用浏览器默认的倾斜来显示
+}
+/*a{
+  color:red;
+}*/
+body{
+  font-family: Arial;
+  font-size: 1.5em;
+	color: royalblue;
+	color: rgb(65, 105, 225);
+	color: #4169E1CC;
+	color: rgba(39,177,182,0.8);
+	color: #2775b6CC;
+}
+
+em{
+  font-family: "Cascadia Mono";
+}
+
+html {
+    font-size: 1.2rem;
+
+}
+/*body的rgb变色形式
+/* body{
+	background-color: rgb(25%, 41%, 88%);
+	background-color: rgb(65, 105, 225);
+}*/
+/*body的十六进制码的颜色
+/*
+body{
+	background-color: #4169E1;
+}
+*/
