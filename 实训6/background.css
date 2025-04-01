@@ -22,11 +22,33 @@ p{
 
 } 
 
-.guarantee {
+p.guarantee {
 	border-color: wheat;
 	border-style: dashed;
 	border-width: 1px;
 	background-color: aquamarine;
+	background-image: url(images/background.gif);/*白色的图片，改背景颜色*/
+	background-repeat: no-repeat;
+  background-position: top left; 
+	padding: 25px;
+	margin: 30px;
+	line-height: 1.9em;
+	font-style: italic;
+	color: #444;
+	font-family: Georgia, 'Times New Roman',;
+	padding: 25px;
+  padding-left: 80px;
+	margin-right: 250px;/*让外边距右边的像素改成250px*/
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	/*border: 1px solid black;*/
+}
+
+h2.guarantee {
+	border-color: wheat;
+	border-style: dashed;
+	border-width: 1px;
+	background-color: red;
 	background-image: url(images/background.gif);/*白色的图片，改背景颜色*/
 	background-repeat: no-repeat;
   background-position: top left; 
