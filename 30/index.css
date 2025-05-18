@@ -1,0 +1,20 @@
+.first
+{
+  height: 50px;
+ 
+}
+.background
+{
+  
+  background-color: black;
+  margin: 0px;
+  height: 36px;
+  position: absolute;
+  width: 100%;
+}
+.logo
+{
+  font-size: 0px;
+  bottom: 0px;
+  z-index: 9999;
+}
