@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ps5.css">
+    <style>
+        .container {
+
+            width: 1600px;
+            margin: 50px auto 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .text-content {
+            margin-right:90px ;
+
+        }
+
+        .picture{
+            height: 500px;
+
+        }
+        .picture img {
+
+            height: 100%;             /* 图片高度占满父容器 */
+        }
+        
+        .choice {
+            margin-top: 30px;         /* 与上方内容的间距 */
+            display: flex;            /* 使用弹性布局 */
+            justify-content: center;  /* 水平居中对齐 */
+            flex-wrap: nowrap;        /* 防止子元素换行 */
+            position: relative;       /* 相对定位，作为滚动按钮的参考点 */
+            margin-left: 20px; /* 调整左侧外边距以实现居中偏右 */
+        }
+        
+        /* 左右滚动按钮样式 */
+        .scroll-btn {
+            position: absolute;       /* 绝对定位 */
+            top: 50%;                 /* 垂直居中 */
+            transform: translateY(-50%); /* 精确垂直居中 */
+            width: 40px;              /* 按钮宽度 */
+            height: 40px;             /* 按钮高度 */
+            background-color: rgb(0, 112, 204); /* 蓝色背景 */
+            border-radius: 50%;       /* 圆形按钮 */
+            display: flex;            /* 使用弹性布局使内容居中 */
+            justify-content: center;  /* 水平居中 */
+            align-items: center;      /* 垂直居中 */
+            color: white;             /* 文字颜色 */
+            font-weight: bold;        /* 文字加粗 */
+            cursor: pointer;          /* 鼠标悬停时显示手型 */
+            z-index: 10;              /* 确保按钮在其他元素上方 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+        }
+        
+        .scroll-btn:hover {
+            background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+            border: 2px solid white;  /* 悬停时显示白色边框 */
+            box-shadow: 0 0 8px rgba(0,112,204); /* 悬停时添加蓝色光晕 */
+        }
+        
+        .scroll-left {
+            left: 10px;               /* 左侧按钮位置 */
+        }
+        
+        .scroll-right {
+            right: 10px;              /* 右侧按钮位置 */
+        }
+        
+        .block {
+            display: inline-block;    /* 行内块元素 */
+            text-align: center;       /* 文本居中 */
+            margin: 0 5px;            /* 左右外边距 */
+            width: 213px;             /* 块宽度 */
+            height: 147px;            /* 块高度 */
+            flex-shrink: 0;           /* 防止元素被压缩 */
+        }
+        
+        .text {
+            white-space: normal;      /* 允许文本正常换行 */
+            font-size: 14px;          /* 文字大小 */
+            margin-top: 5px;          /* 上方外边距 */
+            font-weight: 300;         /* 细字体 */
+            color: #333;              /* 文字颜色 */
+        }
+        
+        /* 图片样式 */
+        .choice img {
+            width: 210px;             /* 图片宽度 */
+            height: 111px;             /* 图片高度 */
+            margin: 5px;              /* 外边距 */
+            padding: 14px;            /* 内边距 */
+            border-radius: 14px;      /* 圆角效果 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            transition: all 0.3s ease; /* 过渡动画 */
+            opacity: 0.6;             /* 默认状态下图片半透明 */
+        }
+        
+        .choice .block:hover img,
+        .choice .block:focus img {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停或选中时阴影加深 */
+            transform: translateY(-3px); /* 悬停或选中时轻微上浮 */
+            opacity: 1;               /* 恢复完全不透明 */
+        }
+        
+        .block {
+            display: inline-block;    /* 行内块元素 */
+            text-align: center;       /* 文本居中 */
+            margin: 0 5px;            /* 左右外边距 */
+            width: 260px;             /* 块宽度 */
+            height: 190px;            /* 块高度 */
+            flex-shrink: 0;           /* 防止元素被压缩 */
+            cursor: pointer;          /* 鼠标指针变为手型 */
+            outline: none;            /* 移除默认的焦点轮廓 */
+            position: relative;       /* 为伪元素提供定位参考 */
+            border: 2px solid transparent; /* 初始透明边框 */
+            transition: border-color 0.3s ease; /* 边框颜色过渡效果 */
+        }
+        
+        .block:focus .tp {
+            border: 2px solid rgb(0, 112, 204); /* 选中时边框变为蓝色 */
+            border-radius: 14px; /* 选中时边框变为圆角 */
+        }
+        
+        .block:focus .text {
+            color: rgb(0, 112, 204); /* 选中时文字变为蓝色 */
+        }
+        .text {
+            white-space: normal;      /* 允许文本正常换行 */
+            font-size: 14px;          /* 文字大小 */
+            margin-top: 5px;          /* 上方外边距 */
+            font-weight: 300;         /* 细字体 */
+            color: #333;              /* 文字颜色 */
+        }
+        
+        /* 按钮容器样式 */
+        .button-container {
+            display: flex;            /* 弹性布局 */
+        }
+        
+        .detailed {
+            color: beige;             /* 文字颜色 */
+            background-color: rgb(0, 112, 204); /* 背景色 */
+            padding: 10px 14px;       /* 内边距 */
+            border-radius: 40px;      /* 圆角效果 */
+            transition: all 0.3s ease; /* 过渡动画 */
+            cursor: pointer;          /* 鼠标悬停时显示手型 */
+            margin-right: 10px;       /* 右侧外边距 */
+            border: 2px solid transparent; /* 透明边框 */
+        }
+        
+        .detailed:hover {
+            background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+            border: 2px solid white;  /* 悬停时显示白色边框 */
+            box-shadow: 0 0 8px rgba(0,112,204); /* 悬停时添加蓝色光晕 */
+        }
+        .text{
+        font-weight: 300; /* 添加细字体 */
+        color: #333;
+        font-size: 14px;
+        }
+        .a {
+            color: rgb(0, 112, 204);  /* 蓝色文字 */
+            font-size: 14px;          /* 减小字体大小 */
+            margin-bottom: 5px;       /* 添加下边距 */
+        }
+        
+        .b {
+            font-weight: 200;         /* 细字体 */
+            padding-top: 15px;        /* 减小上内边距 */
+            padding-bottom: 15px;     /* 减小下内边距 */
+            font-size: 16px;          /* 减小字体大小 */
+            line-height: 1.4;         /* 调整行高 */
+        }
+        h1{
+            font-weight: 400; /* 添加细字体 */        
+            font-size: 60px;
+        }
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <h1>PS5の本体と周辺機器をご紹介</h1>
+            <div class="a">PlayStation 5本体</div>
+                <div class="b">新世代の驚きに満ちたPlayStationタイトルを体験しよう</div>
+                <div>
+                <div class="button-container">
+                    <div class="detailed"> 詳細を見る </div>
+                    <div class="detailed"> ラインナップを見る </div>
+                </div>
+                </div>
+
+        </div>
+
+        <div class="picture">
+            <img src="img/ps5 pro.webp">
+        </div>
+    </div>
+
+    <div class="choice">
+        <div class="scroll-btn scroll-left"><</div>
+        <div class="block" tabindex="0">
+            <img class="tp" src="img/ps5 pro.webp">
+            <div class="text"> PS5本体 </div>
+        </div>
+        <div class="block" tabindex="0">
+            <img class="tp" src="img/ps5.webp">
+            <div class="text"> PS5 Pro </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/dualseree.webp">
+            <div class="text"> DualSense ワイヤレスコントローラー </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/playstation.webp">
+            <div class="text"> DualSense ワイヤレスコントローラー </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/pulse.webp">
+            <div class="text"> PULSE Elite ワイヤレスヘッドセット </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/pulse explore.webp">
+            <div class="text"> PULSE Explore ワイアレスイヤホン </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/dualsense edge.webp">
+            <div class="text"> DualSense Edge </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/access.webp">
+            <div class="text"> DualSense Edge </div>
+        </div>
+        <div class="block"  tabindex="0">
+            <img class="tp" src="img/ps5-console.webp">
+            <div class="text"> DualSense Edge </div>
+        </div>
+        <div class="block" tabindex="0">
+            <img class="tp" src="img/ps5  .webp">
+            <div class="text"> Access コントローラー </div>
+        </div>
+        <div class="block" tabindex="0">
+            <img class="tp" src="img/hd.webp">
+            <div class="text"> PS5用カバー </div>
+        </div>
+        <div class="scroll-btn scroll-right">></div>
+    </div>
+</body>
+</html>
+
