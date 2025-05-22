@@ -279,7 +279,7 @@ img {
 /* PlayStation Plus Section Styles */
 /* PlayStation Plus 整个页面的主要容器样式 */
 .ps-plus-yemian {
-  background-image: url('../lesson_boss/image/10070.webp'); /* 背景图片 */
+  background-image: url('image/10070.webp'); /* 背景图片 */
   background-color: #f0f0f0; /* 背景颜色回退，当图片加载失败时显示 */
   background-size: cover; /* 背景图片覆盖整个容器 */
   background-position: center right; /* 背景图片居中并靠右对齐 */
@@ -473,13 +473,13 @@ img {
   background-position: center; /* 背景图片居中显示 */
 }
 .tier-card-background_1{
-  background-image: url('../lesson_boss/image/10073.webp');
+  background-image: url('image/10073.webp');
 }
 .tier-card-background_2{
-  background-image: url('../lesson_boss/image/10072.webp');
+  background-image: url('image/10072.webp');
 }
 .tier-card-background_3{
-  background-image: url('../lesson_boss/image/10071.webp');
+  background-image: url('image/10071.webp');
 }
 
 /* 卡片下半部分的文字内容区域 */
