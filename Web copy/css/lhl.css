@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" href="lhl.css">
-<style>
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     position: relative;
-    
 }
 
-.lhl-content-wrapper {
+.lhl-content-wrapper{
     position: relative;
-    max-width: 100%;
     width: 100%;
-    height: 433px;
-    background-image: url("img1/30th-anniversary-hub-background-desktop-04-en-02oct24.webp");
-    background-size: cover; /* 替换 contain，确保图片覆盖整个容器 */
+    height: 100%;
+    background-image: url("../img1/30th-anniversary-hub-background-desktop-04-en-02oct24.webp");
+    background-size: contain;
     user-select: none;
     transform: scale(1.3);
-    transform-origin: left center; /* 从左侧中心缩放 */
-    overflow: hidden;
 }
+
+.lhl-content-wrapper, .lhl-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    user-select: none;
+}
+
 
 .lhl-content {
     height: 433px;
@@ -36,7 +33,10 @@ body {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    max-width: 100%;
+
 }
+
 
 .lhl-button {
     all: unset;
@@ -69,20 +69,16 @@ body {
 }
 
 .lhl-background {
+    position: relative;
     height: 527px;
     margin: 0 auto;
-    margin-top: 0;
     display: flex;
     align-items: center;
-    background-image: url("img1/image.png");
+    background-image: url("../img1/image.png");
     background-size: cover;
     background-position: center;
     padding: 20px;
     color: white;
-}
-.lhl-doom{
-    position:relative;
-    top: 65px;
 }
 
 .lhl-background .lhl-text {
@@ -106,7 +102,7 @@ body {
 
 .lhl-text-a {
     align-self: center;
-    margin-top: 10px;
+    margin-top: auto;
     padding: 14px;
     font-size: 14px;
     color: black;
@@ -117,15 +113,11 @@ body {
     margin-right: 10px;
     border: 2px solid transparent;
     font-weight: 600;
-    outline: 2px solid rgba(255, 255, 255, 0); /* 白色，50%透明度 */
-    outline-offset: 2px;            /* 边框与元素的间距 */
-    transition: outline-color 0.1s ease; /* 过渡动画 */
 }
 
 .lhl-text-a:hover {
-    /* border: 2px solid #26254f; */
-    /* box-shadow: 0 0 8px white; */
-    outline-color: rgba(255, 255, 255, 1); /* 悬停时不透明 */
+    border: 2px solid #26254f;
+    box-shadow: 0 0 8px white;
 }
 
 .lhl-a > div {
@@ -149,9 +141,7 @@ body {
 .lhl-b {
     width: 490px;
     height: 338px;
-    padding-top: 17px;
     transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-
 }
 
 .lhl-b img {
@@ -162,7 +152,7 @@ body {
 .lhl-b:hover {
     transform: translateY(-10px);
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid grey;
+    border: 2px solid white;
     border-radius: 12px;
 }
 
@@ -243,58 +233,3 @@ h1 {
 .lhl-right-arrow {
     right: 10px;
 }
-    </style>
-</head>
-<body>
-    <div class="lhl-content-wrapper">
-        <div class="lhl-content">
-            <div class="lhl-introduce">
-                <h2>PlayStationの30年</h2>
-                <div class="lhl-description">
-                    30周年を記念して、PlayStationの歴史と数々のゲーム機本体やゲームを巡る「思い出」を公開中。ぜひ一緒にお祝いしましょう
-                </div>
-                <div class="lhl-button">お祝いに参加する</div>
-                <div class="lhl-button">思い出を振り返る</div>
-            </div>
-            <div class="lhl-Image">
-                <img src="img1/30th-anniversary-logo-01-en-21aug24 (1).webp">
-            </div>
-        </div>
-    </div>
-    <div class="lhl-doom">
-        <div class="lhl-background">
-            <div class="lhl-text">
-            <h1>5月の<br>PlayStation</h1>
-                <p class="lhl-description-a">今月のPlayStation注目トピックスをお届けします。</p>
-            </div>
-        </div>
-
-        <div class="lhl-a">
-            <!-- <div class="lhl-circle lhl-left-arrow">
-                <span><</span>
-            </div> -->
-            <div class="lhl-b">
-                <img src="img1/doom-the-dark-ages-screenshot-09-en-10june24.webp">
-                <div class="lhl-text">
-                    <p>新作ゲームタイトル</p> 
-                    <p class="lhl-text-b">『DOOM: The Dark Ages』を始めとした、今月の新作游戏タイトルをチェックしましょう。</p>
-                </div>
-            </div>
-            <div class="lhl-b">
-                <img src="img1/COD-BLOPS-6-warzone-season-3-keyart-01-en-26mar25$en.webp">
-                <div class="lhl-text">
-                    <p>最新アップデート</p> 
-                    <p class="lhl-text-b">『Call of Duty: Warzone』のシーズン3を始めとする、今月の注目イベントをチェックしましょう。</p>
-                </div>
-            </div>
-            <!-- <div class="lhl-circle lhl-right-arrow">
-                <span>></span>
-            </div> -->
-        </div>
-
-        <div class="lhl-c">
-            <div class="lhl-text-a">詳細を見る</div>
-        </div>
-    </div>
-</body>
-</html>
