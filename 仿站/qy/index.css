@@ -1,0 +1,442 @@
+body, html {
+  margin: 0;
+  padding: 0; 
+}
+
+.qy-first
+{
+  height: 50px;
+ 
+}
+
+.qy-background
+{
+  position: relative;
+  /* top: 0px; 
+  left: 0px;  */
+  bottom: auto;
+  background-color: black;
+  /* font-size: 0; */
+  height: 36px;
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+.qy-logo
+{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 75px;
+
+}
+ .qy-whiteground
+{
+  padding-top: 0px;
+  position: relative;
+  background-color: red;
+  height: 64px; 
+  width: 100%;
+} 
+header
+{
+  position: relative;
+  background-color: white;
+  padding: 0 1.25rem;
+  width: 100%;
+  height: 64px;
+}
+.yu
+{
+  padding: 0px;
+  margin: 0px;
+}
+body
+{
+  padding: 0px;
+  margin: 0px;
+}
+svg 
+{
+  width: 50px;
+  height: 64px;
+}
+botton
+{
+  position: absolute;
+  top: -27px;
+  left: 0px;
+  color: black;
+  padding-left: 5px;
+  padding-right: 20px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: .8125rem;
+  align-items: center;
+  /* border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  height: 40px; /* 设置按钮高度 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding-left: 5px;
+display:inline-block; */
+}
+.botton
+{
+  color: black;
+  font-weight: 400;
+}
+.botton:hover
+{
+  color: blue;
+}
+.separator {
+  color: black;
+  align-items: center;
+  transition: transform 0.15s ease;
+}
+.separator:hover:hover
+{
+  color:blue
+}
+
+
+a{
+  display: inline-block;
+}
+.separator:focus  {
+  transform: rotate(180deg);
+}
+
+.separator02
+{
+  color: white;
+  align-items: center;
+  opacity: 0%;
+}
+.qy-ps-signin-button 
+{
+  position: absolute;
+  top: 20px;
+  right: 110px;
+  display: inline-block;
+  padding: 0px; /* 边框内间距 */
+  background: #0072ce; /* 索尼品牌蓝色 */
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.qy-ps-signin-button__inner {
+  display: block;
+  padding: 5px 15px;
+  background: #0072ce; /* 黑色背景 */
+  color: white;
+  border-radius: 25px; /* 比外框稍小的圆角 */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.qy-search
+{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+  color: black;
+}
+
+.qy-fix-picture
+{
+  height: 250px;
+  width: 100%;
+}
+.picture  {
+  /* position: absolute;
+  left: 0;
+  top: 100; */
+  width: 100%;
+  height: 888%; 
+  object-fit:cover; 
+  display: block;
+  max-width: 100%; 
+  margin: 0 ; 
+ z-index: -1;
+}
+.qy-fixed-div
+{
+  position:absolute;
+  top:120px;
+  left: 70px;
+  z-index: 1; /* 设置一个较高的 z-index 值 */
+  width: 350px;
+}
+
+.qy-text
+{
+  color: white; 
+  position: relative;
+  top: -598px;
+  left: 0px;
+  font-weight: 300;
+  height: 567px;
+  width: 650px;
+  background-color: black;
+  /* opacity: 0.5; */
+  z-index: 0; /* 设置一个较低的 z-index 值 */
+  background: linear-gradient(to right, rgb(118, 113, 113), rgba(128, 128, 128, 0));
+}
+.qy-fixef
+{
+  position: fixed;
+  top: 100px;
+  left: 80px;
+}
+ .qy-fil
+{
+  position: relative;
+  top: 255px;
+  left: 70px;
+  font-size: 18px;
+}
+.qy-fix-botton
+{
+  color: black;
+  position: relative;
+  top: 250px;
+  left: 70px;
+  width: 100px;
+  height: 35px;
+  background-color: white;
+  border-radius: 25px;
+  transition:background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.qy-fix-botton p
+{
+  color: black;
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  font-weight: 400;
+}
+.qy-fix-botton:hover
+{
+ background-color: black;
+ border: 2px solid black;
+}
+.qy-fill
+{
+  position: relative;
+  top: 240px;
+  left: 70px;
+  /* margin-top: 10px;  */
+  font-size: 18px;
+}
+h1
+{
+  position: relative;
+  top: 250px;
+  left: 80px;
+ font-size: 45px;
+ font-weight: 400;
+} 
+.pt
+{
+  position: relative;
+  margin-top: 170px;
+  margin-left: -100px;
+  justify-self: center;
+}
+.pt-span
+{
+  position: relative;
+  top: 100px;
+  left: 0px;
+}
+.pt-one
+{
+  position: relative;
+  top: 40px;
+  left: 97px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-two
+{
+  position: relative;
+  top: 40px;
+  left: 85px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-three
+{
+  position: relative;
+  top: 40px;
+  left: 75px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-four
+{
+  position: relative;
+  top: 40px;
+  left: 63px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-five
+{
+  position: relative;
+  top: 40px;
+  left: 52px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-six
+{
+  position: relative;
+  top: 40px;
+  left: 41px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+.pt-seven
+{
+  position: relative;
+  top: 40px;
+  left: 30px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  display: inline;
+}
+
+.pt-separator{
+  position: relative;
+  color: white;
+  align-items: center;
+  opacity: 0%;
+
+}
+/* 
+a:hover {
+  /* opacity: 0.5;  
+  background-color: rgb(0, 90, 170); 
+            border: 2px solid white;  
+            box-shadow: 0 0 8px rgba(0,112,204); 
+  
+
+} */
+.pt:hover
+{
+  opacity: 0.8;
+}
+
+.pt-one:hover
+{
+  opacity: 1 ;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+  
+ 
+}
+.pt-two:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-three:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-four:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-five:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-six:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-seven:hover
+{
+  opacity: 1;
+  background-color: rgb(0, 90, 170); /* 悬停时背景色变深 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+  transform: translateY(-10px); /* 悬停时轻微上浮 */
+  transition:  0.2s ease; /* 过渡动画 */
+}
+.pt-one:focus
+{
+  
+  border: 3px solid black;
+
+ 
+}
+a
+{
+  text-decoration: none; /* 完全去除下划线 */
+}
+
+.under
+{
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  top:500px;
+  left: 0px;
+}
+
+
+.transparent
+{
+  position: relative;
+  height: 100px;
+  opacity: 0;
+}

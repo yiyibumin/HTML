@@ -3,73 +3,61 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     position: relative;
+    
 }
 
-.lhl-content-wrapper{
+.lhl .content-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
+    height: 512px;
     background-image: url("../img1/30th-anniversary-hub-background-desktop-04-en-02oct24.webp");
     background-size: contain;
     user-select: none;
-    transform: scale(1.3);
 }
 
-.lhl-content-wrapper, .lhl-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    user-select: none;
-}
-
-
-.lhl-content {
-    height: 433px;
+.lhl .content {
+    height: 512px;
     z-index: 1;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    max-width: 100%;
-
 }
 
+.lhl .button {
+        all: unset;
+        margin:+7px;  
+        display: inline-block;
+        background-color: rgb(0, 112, 204);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        outline:2px solid rgba(0,112,204,0);
+        outline-offset: 1.5px;
+        transition: outline-color 0.2s ease;
+    }
+    .lhl .button:hover {
+        outline: 2px solid rgba(0,112,204,1);
+    }
 
-.lhl-button {
-    all: unset;
-    display: inline-block;
-    background-color: #0070cc;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.lhl-button:hover {
-    background-color: rgb(0, 90, 170);
-    border: 2px solid white;
-    box-shadow: 0 0 8px rgba(0,112,204);
-}
-
-.lhl-Image {
+.lhl .Image {
     width: 1000px;
     height: 237px;
     order: 2;
 }
 
-.lhl-Image img {
+.lhl .Image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.lhl-background {
-    position: relative;
+.lhl .background {
     height: 527px;
     margin: 0 auto;
     display: flex;
@@ -81,7 +69,7 @@ body {
     color: white;
 }
 
-.lhl-background .lhl-text {
+.lhl .background .text {
     font-size: 24px;
     line-height: 1.5;
     margin: 0 auto;
@@ -89,7 +77,7 @@ body {
     padding-right: 40%;
 }
 
-.lhl-a {
+.lhl .a {
     position: relative;
     background-color: #26254f;
     height: 426px;
@@ -100,9 +88,9 @@ body {
     flex-wrap: nowrap;
 }
 
-.lhl-text-a {
+.lhl .text-a {
     align-self: center;
-    margin-top: auto;
+    margin-top: 10px;
     padding: 14px;
     font-size: 14px;
     color: black;
@@ -111,52 +99,61 @@ body {
     border-radius: 40px;
     cursor: pointer;
     margin-right: 10px;
-    border: 2px solid transparent;
     font-weight: 600;
+    outline: 2px solid rgba(255, 255, 255, 0); /* 白色，50%透明度 */
+    outline-offset: 2px;            /* 边框与元素的间距 */
+    transition: outline-color 0.1s ease; /* 过渡动画 */
 }
 
-.lhl-text-a:hover {
-    border: 2px solid #26254f;
-    box-shadow: 0 0 8px white;
+.lhl .text-a:hover {
+    /* border: 2px solid #26254f; */
+    /* box-shadow: 0 0 8px white; */
+    outline-color: rgba(255, 255, 255, 1); /* 悬停时不透明 */
 }
 
-.lhl-a > div {
+.lhl .a > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
 
-.lhl-a .lhl-text {
+.lhl .a .text {
     font-size: 16px;
     color: white;
 }
 
-.lhl-a img {
+.lhl .text{
+    margin-left: 30px;
+}
+
+.lhl .a img {
     width: 209px;
     height: 117px;
     border-radius: 12px;
 }
 
-.lhl-b {
-    width: 490px;
-    height: 338px;
+.lhl .b {
+    width: 510px;
+    height: 370px;
+    padding-top: 17px;
     transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
 }
 
-.lhl-b img {
+.lhl .b img {
     width: 450px;
     height: 238px;
 }
 
-.lhl-b:hover {
+.lhl .b:hover {
     transform: translateY(-10px);
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid white;
+    border: 2px solid grey;
     border-radius: 12px;
 }
 
-.lhl-c {
+.lhl .c {
     background-color: #26254f;
     display: flex;
     flex-direction: row;
@@ -171,7 +168,7 @@ h2 {
     font-weight: 200;
 }
 
-.lhl-text-b {
+.lhl .text-b {
     font-size: 14px;
     font-weight: 200;
 }
@@ -181,21 +178,21 @@ h1 {
     font-size: 43px;
 }
 
-.lhl-description .lhl-description-a {
+.lhl .description .lhl .description-a {
     font-weight: 400;
     font-size: 20px;
 }
 
-.lhl-description-a {
+.lhl .description-a {
     color: rgb(178,178,178);
 }
 
-.lhl-description {
+.lhl .description {
     color: rgb(107,107,107);
     margin-bottom: 15px;
 }
 
-.lhl-circle {
+.lhl .circle {
     width: 50px;
     height: 50px;
     background-color: #0070cc;
@@ -211,7 +208,7 @@ h1 {
     cursor: pointer;
 }
 
-.lhl-circle {
+.lhl .circle {
     font-size: 14px;
     color: black;
     background-color: white;
@@ -221,15 +218,15 @@ h1 {
     border: 2px solid transparent;
 }
 
-.lhl-circle:hover {
+.lhl .circle:hover {
     border: 2px solid #26254f;
     box-shadow: 0 0 8px white;
 }
 
-.lhl-left-arrow {
+.lhl .left-arrow {
     left: 10px;
 }
 
-.lhl-right-arrow {
+.lhl .right-arrow {
     right: 10px;
 }
