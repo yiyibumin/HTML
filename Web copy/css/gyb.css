@@ -2,6 +2,10 @@
 	padding: 0px;
 	margin: 0px;
 }
+.gyb body{
+	position: absolute;
+	margin-top: auto;
+}
 .gyb .footer{
 	width: 100%;
 	background-color: #00439c;

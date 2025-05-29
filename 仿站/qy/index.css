@@ -179,20 +179,21 @@ a{
   width: 350px;
 }
 
-.qy-text
-{
+.qy-text {
   color: white; 
-  position: relative;
-  top: -598px;
+  position: absolute;  /* 改为绝对定位 */
+  top: 100px;         /* 调整top值 */
   left: 0px;
   font-weight: 300;
-  height: 567px;
+  height: auto;       /* 改为自动高度 */
   width: 650px;
-  background-color: black;
-  /* opacity: 0.5; */
-  z-index: 0; /* 设置一个较低的 z-index 值 */
   background: linear-gradient(to right, rgb(118, 113, 113), rgba(128, 128, 128, 0));
+  z-index: 0;
+  padding: 20px;      /* 添加内边距 */
 }
+
+
+
 .qy-fixef
 {
   position: fixed;
@@ -424,13 +425,13 @@ a
   text-decoration: none; /* 完全去除下划线 */
 }
 
-.under
-{
-  position: absolute;
-  height: 500px;
+.under {
+  position: relative;  /* 改为相对定位 */
+  height: auto;        /* 改为自动高度 */
   width: 100%;
-  top:500px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  margin-top: 20px;    /* 添加适当的上边距 */
 }
 
 
@@ -439,4 +440,19 @@ a
   position: relative;
   height: 100px;
   opacity: 0;
+}
+
+.qy-fil, .qy-fill, h1 {
+  position: relative;
+  top: 0;            /* 重置top值 */
+  left: 0;
+  margin: 10px 0;    /* 使用margin代替绝对定位 */
+}
+
+.qy-fix-botton {
+  position: relative;
+  top: 0;            /* 重置top值 */
+  left: 0;
+  margin-top: 20px;  /* 使用margin代替绝对定位 */
+  /* 其他样式保持不变 */
 }

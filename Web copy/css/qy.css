@@ -1,6 +1,10 @@
 body {
-  margin: 0;
-  padding: 0; 
+  margin: 0px;
+  padding: 0px; 
+}
+
+.qy{
+  padding: 0px;
 }
 
 .qy .qy-first
@@ -51,11 +55,7 @@ body {
   padding: 0px;
   margin: 0px;
 }
-body
-{
-  padding: 0px;
-  margin: 0px;
-}
+
 .qy svg 
 {
   width: 50px;
@@ -179,20 +179,20 @@ display:inline-block; */
   width: 350px;
 }
 
-.qy .qy-text
-{
+
+.qy .qy-text {
   color: white; 
-  position: relative;
-  top: -598px;
+  position: absolute;  /* 改为绝对定位 */
+  top: 100px;         /* 调整top值 */
   left: 0px;
   font-weight: 300;
-  height: 567px;
+  height: auto;       /* 改为自动高度 */
   width: 650px;
-  background-color: black;
-  /* opacity: 0.5; */
-  z-index: 0; /* 设置一个较低的 z-index 值 */
-  background: linear-gradient(to right, rgb(118, 113, 113), rgba(128, 128, 128, 0));
+  z-index: 0;
+  padding: 20px;      /* 添加内边距 */
 }
+
+
 .qy .qy-fixef
 {
   position: fixed;
@@ -252,8 +252,7 @@ display:inline-block; */
 .qy .pt
 {
   position: relative;
-  margin-top: 170px;
-  margin-left: -100px;
+  margin-top: 230px;
   justify-self: center;
 }
 .qy .pt-span
